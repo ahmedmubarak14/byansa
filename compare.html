@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Byan Solutions | Old vs New Brand</title>
+  <meta name="description" content="Compare the previous Byan Solutions website direction with the refreshed brand direction." />
+  <style>
+    @font-face {
+      font-family: "Byan Montserrat";
+      src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+      font-weight: 100 900;
+      font-display: swap;
+    }
+
+    :root {
+      --cream: #f1ede4;
+      --purple: #18012b;
+      --lime: #c8d32d;
+      --lavender: #d1c7f9;
+      --muted: #665173;
+      --line: rgba(24, 1, 43, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(241, 237, 228, 0.94), rgba(241, 237, 228, 0.98)),
+        url("./assets/brand/pattern-lime.svg") top right / 680px auto repeat;
+      color: var(--purple);
+      font-family: "Byan Montserrat", system-ui, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(calc(100% - 32px), 1440px);
+      margin: 0 auto;
+      padding: 24px 0 32px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 0 24px;
+    }
+
+    .brand {
+      width: 172px;
+      height: auto;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .button {
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--purple);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .button.alt {
+      background: var(--lime);
+      color: var(--purple);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 18px;
+      padding: 22px 0 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 0.96;
+      letter-spacing: 0;
+      max-width: 12ch;
+    }
+
+    .note {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 56ch;
+      font-size: 15px;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .pane {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 22px 58px rgba(24, 1, 43, 0.1);
+    }
+
+    .pane-header {
+      min-height: 58px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pane-title {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .pane-title strong {
+      font-size: 15px;
+    }
+
+    .pane-title span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .badge {
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      background: rgba(209, 199, 249, 0.42);
+      color: var(--purple);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .badge.new {
+      background: var(--lime);
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 760px;
+      border: 0;
+      background: #fff;
+    }
+
+    @media (max-width: 980px) {
+      .intro,
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .actions {
+        justify-content: flex-start;
+      }
+
+      iframe {
+        height: 640px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .shell {
+        width: min(calc(100% - 22px), 1440px);
+        padding-top: 14px;
+      }
+
+      .brand {
+        width: 136px;
+      }
+
+      .pane-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px;
+      }
+
+      iframe {
+        height: 560px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a href="./index.html" aria-label="Byan Solutions new homepage">
+        <img class="brand" src="./assets/brand/byan-full-color.svg" alt="Byan Solutions" />
+      </a>
+      <div class="actions">
+        <a class="button alt" href="./index.html">Open New Brand</a>
+        <a class="button" href="./old-brand.html">Open Old Version</a>
+      </div>
+    </header>
+
+    <section class="intro" aria-labelledby="pageTitle">
+      <h1 id="pageTitle">Old vs New Brand</h1>
+      <p class="note">Use this side-by-side view to compare the previous visual direction against the refreshed Byan brand: official logo, palette, pattern language, and local brand typography.</p>
+    </section>
+
+    <main class="comparison">
+      <section class="pane" aria-label="Old website">
+        <div class="pane-header">
+          <div class="pane-title">
+            <strong>Previous Website</strong>
+            <span>Original red, black, and warm neutral direction</span>
+          </div>
+          <span class="badge">Old</span>
+        </div>
+        <iframe src="./old-brand.html" title="Previous Byan Solutions website"></iframe>
+      </section>
+
+      <section class="pane" aria-label="New website">
+        <div class="pane-header">
+          <div class="pane-title">
+            <strong>Refreshed Website</strong>
+            <span>New Byan palette, logo, pattern, and typography</span>
+          </div>
+          <span class="badge new">New</span>
+        </div>
+        <iframe src="./index.html" title="New Byan Solutions website"></iframe>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
